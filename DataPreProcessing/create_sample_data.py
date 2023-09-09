@@ -31,7 +31,8 @@ for _ in range(num_samples):
         'cost': cost,
         'hsrp': hsrp,
         'marked_price': marked_price,
-        'discount' : discount
+        'discount' : discount,
+        'sold_price':sold_price
     })
 
 # Create a DataFrame from the list of dictionaries
