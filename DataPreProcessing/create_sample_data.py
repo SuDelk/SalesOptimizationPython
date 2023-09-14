@@ -6,37 +6,900 @@ import string
 data = []
 
 # Generate 100 sample clothing items
-num_samples = 100
+num_samples = 2000
 
 for _ in range(num_samples):
-    name = ''.join(random.choice(string.ascii_letters) for _ in range(10))  # Random name
-    barcode = ''.join(random.choice(string.digits) for _ in range(10))  # Random barcode
-    description = ' '.join(random.choice(string.ascii_letters) for _ in range(20))  # Random description
-    brand = random.choice(['Brand A', 'Brand B', 'Brand C'])  # Random brand
-    color = random.choice(['Red', 'Blue', 'Green', 'Black'])  # Random color
-    clothing_type = random.choice(['Shirt', 'Pants', 'Dress', 'Shoes'])  # Random type
-    cost = random.uniform(10, 100)  # Random cost between 10 and 100
-    hsrp = random.uniform(cost, 150)  # Random humanly suggested price between 20 and 150
-    marked_price = random.uniform(cost, 150)
-    sold_price = random.uniform(cost, marked_price)
-    discount = marked_price - sold_price
+    # get 20 random clothing brands
+    brand = random.choice(['Nike', 'Adidas', 'Puma', 'Reebok', 'Levis', 'H&M', 'Zara', 'Gucci', 'Louis Vuitton', 'Chanel', 'Hermes',
+            'Prada', 'Armani', 'Versace', 'Calvin Klein', 'Tommy Hilfiger', 'Ralph Lauren', 'Lacoste',
+              'Under Armour'])
+    
+    # get 10 random clothing colors
+    color = random.choice(['Red', 'Blue', 'Green', 'Black', 'White', 'Orange', 'Yellow', 'Purple', 'Pink', 'Brown'])
+
+    # get 20 random clothing types
+    clothing_type = random.choice(['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket', 'Jeans', 'Shorts', 'Skirt', 'Dress',
+                     'Socks', 'Underwear', 'Bra', 'Shoes', 'Boots', 'Sandals', 'Slippers', 'Hat', 'Gloves', 'Scarf',
+                     'Jewelry'])
+    
+    # get cost differently by the brand of the clothing
+    if brand == 'Nike':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Adidas':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Puma':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Reebok':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Levis':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'H&M':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Zara':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Gucci':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Louis Vuitton':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Chanel':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Hermes':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Prada':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Armani':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Versace':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Calvin Klein':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Tommy Hilfiger':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Ralph Lauren':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Lacoste':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    elif brand == 'Under Armour':
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+    else:
+        if clothing_type == 'T-Shirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Polo Shirt':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Sweater':
+            cost = random.uniform(30, 80)
+        elif clothing_type == 'Hoodie':
+            cost = random.uniform(40, 90)
+        elif clothing_type == 'Jacket':
+            cost = random.uniform(50, 100)
+        elif clothing_type == 'Jeans':
+            cost = random.uniform(20, 70)
+        elif clothing_type == 'Shorts':
+            cost = random.uniform(10, 60)
+        elif clothing_type == 'Skirt':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Dress':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Socks':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Underwear':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Bra':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Shoes':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Boots':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Sandals':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Slippers':
+            cost = random.uniform(100, 150)
+        elif clothing_type == 'Hat':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Gloves':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Scarf':
+            cost = random.uniform(10, 50)
+        elif clothing_type == 'Jewelry':
+            cost = random.uniform(100, 150)
+        else:
+            cost = random.uniform(10, 150)
+
+    # get cost differently by the type of the clothing
+
+
+    marked_price = random.uniform(cost * 1.2, 200)
+
     # Append the data as a dictionary to the list
     data.append({
-        'name': name,
-        'barcode': barcode,
-        'description': description,
         'brand': brand,
         'color': color,
         'type': clothing_type,
         'cost': cost,
-        'hsrp': hsrp,
-        'marked_price': marked_price,
-        'discount' : discount,
-        'sold_price':sold_price
+        'marked_price': marked_price
     })
 
 # Create a DataFrame from the list of dictionaries
 df = pd.DataFrame(data)
 
 # Save the dataset as a CSV file
-df.to_csv("clothing_data2.csv", index=False)
+df.to_csv("new_data_set1.csv", index=False)
