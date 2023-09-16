@@ -32,7 +32,7 @@ poly_regressor.fit(x_train_poly, y_train)
 
 y_pred_poly = poly_regressor.predict(x_test_poly)
 
-print("R2 value for Polynomial Linear Regression: ", r2_score(y_test, y_pred_poly))
+print("R2 Score for Polynomial Linear Regression: ", r2_score(y_test, y_pred_poly))
 
 x_new = np.array([["Nike", "Brown", "T-Shirt", 87.11]])
 

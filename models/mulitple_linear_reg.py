@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
-dataset = pd.read_csv('new_data_set5.csv')
+dataset = pd.read_csv('new_data_set4.csv') #change dataset as needed
 
 x = dataset.iloc[:, :-1].values  # locate index
 y = dataset.iloc[:, -1].values  # locate index
@@ -19,13 +19,14 @@ transformers = [('encoder', OneHotEncoder(), categorical_columns),
 ct = ColumnTransformer(transformers=transformers)
 x = np.array(ct.fit_transform(x).toarray())
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
+x_train, x_test, y_train, y_test = train_test_split(
+    x, y, test_size=0.2, random_state=1)
 
 regressor = LinearRegression()
 regressor.fit(x_train, y_train)
 
 y_pred = regressor.predict(x_test)
-print("R2 value: ", r2_score(y_test, y_pred))
+print("R2 Score for Multiple Linear Regression Model: ", r2_score(y_test, y_pred))
 
 np.set_printoptions(precision=2)
 

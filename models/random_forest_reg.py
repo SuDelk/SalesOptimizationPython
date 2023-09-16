@@ -25,7 +25,7 @@ regressor = RandomForestRegressor(n_estimators=10, random_state=1)
 regressor.fit(x_train, y_train)
 
 y_pred = regressor.predict(x_test)
-print("R2 value: ", r2_score(y_test, y_pred))
+print("R2 Score for Random Forest Regression Model: ", r2_score(y_test, y_pred))
 
 np.set_printoptions(precision=2)
 

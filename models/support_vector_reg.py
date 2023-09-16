@@ -2,9 +2,9 @@ import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
+from sklearn.svm import SVR
 
 dataset = pd.read_csv('new_data_set4.csv')
 
@@ -13,19 +13,19 @@ y = dataset.iloc[:, -1].values  # locate index
 
 categorical_columns = [0, 1, 2]
 
-transformers = [('encoder', OneHotEncoder(), categorical_columns), 
+transformers = [('encoder', OneHotEncoder(sparse=False), categorical_columns), 
                 ('passthrough', 'passthrough', 
                  [i for i in range(len(x[0])) if i not in categorical_columns])]
 ct = ColumnTransformer(transformers=transformers)
-x = np.array(ct.fit_transform(x).toarray())
+x = np.array(ct.fit_transform(x))
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
 
-regressor = LinearRegression()
+regressor = SVR()
 regressor.fit(x_train, y_train)
 
 y_pred = regressor.predict(x_test)
-print("R2 value: ", r2_score(y_test, y_pred))
+print("R2 Score for Support Vector Regression Model: ", r2_score(y_test, y_pred))
 
 np.set_printoptions(precision=2)
 x_new = ([["Nike", "Brown", "T-Shirt", 87.11]])
