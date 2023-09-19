@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
-dataset = pd.read_csv('new_data_set4.csv')
+dataset = pd.read_csv('dataset_clothing5.csv')
 
 x = dataset.iloc[:, :-1].values  # locate index
 y = dataset.iloc[:, -1].values  # locate index

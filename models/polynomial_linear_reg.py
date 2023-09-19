@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
-dataset = pd.read_csv('new_data_set4.csv')
+dataset = pd.read_csv('dataset_clothing5.csv')
 
 x = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values

@@ -6,7 +6,7 @@ import string
 data = []
 
 # Generate 100 sample clothing items
-num_samples = 2000
+num_samples = 5000
 
 for _ in range(num_samples):
     # get 20 random clothing brands
@@ -288,4 +288,4 @@ for _ in range(num_samples):
 df = pd.DataFrame(data)
 
 # Save the dataset as a CSV file
-df.to_csv("dataset_clothing.csv", index=False)
+df.to_csv("dataset_clothing5.csv", index=False)
