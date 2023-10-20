@@ -12,14 +12,14 @@ for _ in range(num_samples):
     # get 20 random clothing brands
     brand = random.choice(['H&M', 'Zara', 'Nike', 'Under Armour', 'Adidas', 'Puma', 'Reebok', 'Nike',
                            'Levis', 'Tommy Hilfiger', 'Ralph Lauren', 'Lacoste', 'Calvin Klein',
-                           'Gucci', 'Prada', 'Versace', 'Armani', 'Chanel', 'Burberry', 'Dior'])
+                           'Gucci', 'Prada', 'Versace', 'Armani', 'Chanel', 'Burberry', 'Dior', 'Unbranded'])
 
     # get 10 random clothing colors
     color = random.choice(['Red', 'Blue', 'Green', 'Black',
                           'White', 'Orange', 'Yellow', 'Purple', 'Pink', 'Brown'])
 
     # get 20 random clothing types
-    clothing_type = random.choice(['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket', 'Jeans', 'Shorts', 'Skirt', 'Dress',
+    clothing_type = random.choice(['T-Shirt', 'Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket', 'Jeans', 'Shorts', 'Skirt', 'Dress',
                                    'Socks', 'Underwear', 'Bra', 'Shoes', 'Boots', 'Sandals', 'Slippers', 'Hat', 'Gloves', 'Scarf',
                                    'Jewelry'])
 
@@ -28,7 +28,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for H&M brand
     if brand == 'H&M':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(10, 50)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(20, 70)
@@ -41,7 +41,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Zara brand
     elif brand == 'Zara':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(20, 70)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(30, 100)
@@ -54,7 +54,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Nike brand
     elif brand == 'Nike':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(30, 100)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(50, 150)
@@ -67,7 +67,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Under Armour brand
     elif brand == 'Under Armour':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(40, 120)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(60, 180)
@@ -80,7 +80,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Adidas brand
     elif brand == 'Adidas':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(50, 150)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(70, 210)
@@ -93,7 +93,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Puma brand
     elif brand == 'Puma':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(60, 180)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(80, 240)
@@ -106,7 +106,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Reebok brand
     elif brand == 'Reebok':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(70, 210)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(90, 270)
@@ -119,7 +119,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Levis brand
     elif brand == 'Levis':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(80, 240)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(100, 300)
@@ -132,7 +132,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Tommy Hilfiger brand
     elif brand == 'Tommy Hilfiger':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(90, 270)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(110, 330)
@@ -145,7 +145,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Ralph Lauren brand
     elif brand == 'Ralph Lauren':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(100, 300)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(120, 360)
@@ -158,7 +158,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Lacoste brand
     elif brand == 'Lacoste':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(110, 330)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(130, 390)
@@ -171,7 +171,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Calvin Klein brand
     elif brand == 'Calvin Klein':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(120, 360)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(140, 420)
@@ -184,7 +184,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Gucci brand
     elif brand == 'Gucci':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(130, 390)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(150, 450)
@@ -197,7 +197,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Prada brand
     elif brand == 'Prada':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(140, 420)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(160, 480)
@@ -210,7 +210,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Versace brand
     elif brand == 'Versace':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(150, 450)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(170, 510)
@@ -223,7 +223,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Armani brand
     elif brand == 'Armani':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(160, 480)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(180, 540)
@@ -236,7 +236,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Chanel brand
     elif brand == 'Chanel':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(170, 510)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(190, 570)
@@ -249,7 +249,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Burberry brand
     elif brand == 'Burberry':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(180, 540)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(200, 600)
@@ -262,7 +262,7 @@ for _ in range(num_samples):
 
     # get cost differently by the clothing_type for Dior brand
     elif brand == 'Dior':
-        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Sweater', 'Hoodie', 'Jacket']:
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket']:
             cost = random.uniform(190, 570)
         elif clothing_type in ['Jeans', 'Shorts', 'Skirt', 'Dress']:
             cost = random.uniform(210, 630)
@@ -272,6 +272,17 @@ for _ in range(num_samples):
             cost = random.uniform(210, 840)
         elif clothing_type in ['Hat', 'Gloves', 'Scarf', 'Jewelry']:
             cost = random.uniform(180, 420)
+    
+    # get cost differently by the clothing_type for Unbranded brand
+    elif brand == 'Unbranded':
+        if clothing_type in ['T-Shirt', 'Polo Shirt', 'Shirt', 'Sweater', 'Hoodie', 'Jacket', 'Jeans', 'Shorts', 'Skirt', 'Dress']:
+            cost = random.uniform(10, 50)
+        elif clothing_type in ['Socks', 'Underwear', 'Bra']:
+            cost = random.uniform(5, 20)
+        elif clothing_type in ['Shoes', 'Boots', 'Sandals', 'Slippers']:
+            cost = random.uniform(20, 100)
+        elif clothing_type in ['Hat', 'Gloves', 'Scarf', 'Jewelry']:
+            cost = random.uniform(5, 30)
 
     marked_price = random.uniform(cost * 1.2, 200)
 
@@ -288,4 +299,4 @@ for _ in range(num_samples):
 df = pd.DataFrame(data)
 
 # Save the dataset as a CSV file
-df.to_csv("dataset_clothing5.csv", index=False)
+df.to_csv("final_data_set.csv", index=False)

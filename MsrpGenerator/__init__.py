@@ -65,7 +65,7 @@ def generate_price(cost):
     return (round(float(random.uniform(cost * 1.2, cost * 1.8)) / 10) * 10 ) - 0.01
 
 def predict_price(cost, brand, type, color):
-    dataset = pd.read_csv('https://sliitb83e.blob.core.windows.net/clothing-data-for-spm/clothing_data.csv')
+    dataset = pd.read_csv('https://sliitb83e.blob.core.windows.net/clothing-data-for-spm/final_data_set.csv')
 
     # independent variables (features)
     x = dataset.iloc[:, :-1].values  # locate index
@@ -79,7 +79,7 @@ def predict_price(cost, brand, type, color):
                     ('passthrough', 'passthrough', 
                     [i for i in range(len(x[0])) if i not in categorical_columns])]
     ct = ColumnTransformer(transformers=transformers)
-    x = np.array(ct.fit_transform(x))
+    x = np.array(ct.fit_transform(x).toarray())
 
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
 

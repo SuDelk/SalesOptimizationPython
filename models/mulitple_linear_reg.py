@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 
-dataset = pd.read_csv('dataset_clothing4.csv') #change dataset as needed
+dataset = pd.read_csv('final_data_set.csv') #change dataset as needed
 
 x = dataset.iloc[:, :-1].values  # locate index
 y = dataset.iloc[:, -1].values  # locate index
